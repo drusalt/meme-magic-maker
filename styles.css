@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Impact', sans-serif;
-    background: linear-gradient(135deg, #d0e8f2, #e6d9f2); /* Soft blue to pale lavender gradient */
+    background: linear-gradient(135deg, #ffebee, #f8bbd0); /* Light peach to pale pink gradient */
     color: #333;
     min-height: 100vh;
     display: flex;
@@ -20,24 +20,24 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background: #468c8a; /* Muted teal header */
+    background: #ff6f61; /* Warm coral header */
     width: 100%;
 }
 
 header h1 {
-    font-family: 'Bangers', cursive;
-    font-size: 3rem;
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    line-height: 1.2; /* Prevent awkward wrapping */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
 }
 
 header p {
     font-family: 'Comic Neue', sans-serif;
     font-size: 1.2rem;
-    color: #f0f4f8;
+    color: #fff;
     margin-top: 5px;
 }
 
@@ -51,18 +51,18 @@ main {
 }
 
 .meme-container {
-    background: #fffde7; /* Very light yellow */
+    background: #fff8e1; /* Light cream */
     padding: 15px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
     text-align: center;
-    border: 2px solid #80cbc4; /* Light teal border */
+    border: 2px solid #ff6f61; /* Coral border */
 }
 
 .meme-canvas {
-    border: 2px dashed #468c8a; /* Muted teal dashed border */
+    border: 2px dashed #ff6f61; /* Coral dashed border */
     border-radius: 5px;
     width: 100%;
     max-width: 500px;
@@ -82,7 +82,7 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    border: 2px solid #80cbc4; /* Light teal border */
+    border: 2px solid #ff6f61; /* Coral border */
 }
 
 input[type="file"],
@@ -90,50 +90,50 @@ input[type="text"] {
     width: 100%;
     padding: 8px;
     font-size: 1rem;
-    border: 2px solid #468c8a;
+    border: 2px solid #ff6f61;
     border-radius: 5px;
     font-family: 'Comic Neue', sans-serif;
-    background: #f3e9fa; /* Very pale lavender */
+    background: #fce4ec; /* Very light pink */
 }
 
 button {
     padding: 10px 20px;
     font-size: 1.1rem;
     text-transform: uppercase;
-    background: #80deea; /* Pastel teal button */
-    color: #333;
-    border: 2px solid #468c8a;
+    background: #26c6da; /* Teal button */
+    color: #fff;
+    border: 2px solid #ff6f61;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.2s ease;
-    font-family: 'Bangers', cursive;
+    font-family: 'Fredoka One', cursive;
     letter-spacing: 1px;
-    touch-action: manipulation; /* Improve touch responsiveness */
+    touch-action: manipulation;
 }
 
 button:hover {
-    background: #ffccbc; /* Soft coral hover effect */
+    background: #f06292; /* Pink hover effect */
     transform: translateY(-2px);
 }
 
 button:nth-child(4) { /* Generate Meme button */
-    background: #80deea;
+    background: #26c6da;
 }
 
 button:nth-child(5) { /* Download Meme button */
-    background: #ffccbc;
+    background: #f06292;
 }
 
 button:nth-child(5):hover {
-    background: #80deea; /* Swap colors on hover */
+    background: #26c6da; /* Swap colors on hover */
 }
 
 footer {
     text-align: center;
     padding: 10px;
     font-family: Arial, sans-serif;
-    background: #468c8a;
-    color: #f0f4f8;
+    background: #ff6f61;
+    color: #fff;
     width: 100%;
     font-size: 0.9rem;
 }
@@ -141,9 +141,9 @@ footer {
 /* Mobile Adjustments */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 1.8rem; /* Smaller font size for mobile */
-        letter-spacing: 1px; /* Reduce letter spacing for better readability */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Softer shadow */
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     }
 
     header p {
