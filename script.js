@@ -68,4 +68,17 @@ function downloadMeme() {
         const newTab = window.open();
         newTab.document.write(`
             <html>
-            <body style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; background: #000; padding: 20px;
+            <body style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; background: #000; padding: 20px; box-sizing: border-box;">
+                <img src="${dataUrl}" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 20px;">
+                <p style="color: white; text-align: center; font-family: Arial, sans-serif; font-size: 1rem; max-width: 600px;">Long-press the image and select "Save to Photos" to save it to your gallery.</p>
+            </body>
+            </html>
+        `);
+    } else {
+        // On PC: Trigger a direct download
+        const link = document.createElement('a');
+        link.download = 'meme.png';
+        link.href = dataUrl;
+        link.click();
+    }
+}
