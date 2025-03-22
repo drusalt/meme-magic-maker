@@ -15,10 +15,10 @@ resizeCanvas(); // Initial call
 // Draw placeholder text on the canvas
 function drawPlaceholder() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = `${canvas.width * 0.06}px Arial`; // Slightly larger font for mobile
+    ctx.font = `${canvas.width * 0.06}px Arial`;
     ctx.fillStyle = '#999';
     ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle'; // Center vertically
+    ctx.textBaseline = 'middle';
     ctx.fillText('Your Meme Will Appear Here!', canvas.width / 2, canvas.height / 2);
 }
 
@@ -58,8 +58,16 @@ function generateMeme() {
 }
 
 function downloadMeme() {
-    const link = document.createElement('a');
-    link.download = 'meme.png';
-    link.href = canvas.toDataURL('image/png');
-    link.click();
+    const dataUrl = canvas.toDataURL('image/png');
+    
+    // Open the image in a new tab
+    const newTab = window.open();
+    newTab.document.write(`
+        <html>
+        <body style="margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #000;">
+            <img src="${dataUrl}" style="max-width: 100%; max-height: 100%;">
+            <p style="color: white; text-align: center;">Long-press the image and select "Save to Photos" to save it to your gallery.</p>
+        </body>
+        </html>
+    `);
 }
